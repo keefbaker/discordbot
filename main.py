@@ -10,7 +10,9 @@ import discord
 STARTS = [
     "I’m really impressed by",
     "I'm blown away by",
-    "I'm stunned by"
+    "I'm stunned by",
+    "I'm shocked by",
+    "I'm amazed by"
 ]
 
 MIDS = [
