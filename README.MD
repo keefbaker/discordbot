@@ -6,5 +6,5 @@ make sure you set the DISCORD_TOKEN environment variable for it to work
 
 installing....
 
-`pip install discord.py`
-profit
+* `pip install discord.py`
+* profit
