@@ -18,7 +18,7 @@ STARTS = [
     "It's jaw dropping! I'm electrified",
     "Phenomenal! I'm impressed",
     "If only I'd had this years ago. It's impressive",
-    "Wow! Astounded",
+    "I'm Astounded",
     "I'm amazed"
 ]
 
@@ -36,9 +36,9 @@ MIDS = [
     "the dreamy richness",
     "the digital textures",
     "the nature based generative possibilities",
-    "how genuinely analogue-sounding",
-    "how they pulled off the power that",
-    "why nobody ever made this before. The sheer sonic power"
+    "the genuinely analogue-sounde",
+    "the amazing power",
+    "the sheer volume"
 ]
 
 ENDS = [
@@ -74,10 +74,22 @@ async def generate_message(plugin):
     start = random.choice(STARTS)
     mid = random.choice(MIDS)
     end = random.choice(ENDS)
+    superlatives = [
+        "awesome",
+        "incredible",
+        "phenomenal",
+        "a brand new way of working",
+        "unbelievable",
+        "a bit shit",
+        "superb",
+        "the son I never had"
+    ]
     sentences = [
         f"{start} by {mid} {plugin} {end}",
         f"{start}! {mid.capitalize()} {plugin} {end}",
-        f"{start}! {mid.capitalize()} it is to use {plugin}!"
+        f"{start}! {mid.capitalize()} from {plugin}!",
+        f"I'm too busy to deal with your shit right now.... sigh... Ok, {plugin} is decent. Happy?",
+        f"{mid.capitalize()}, {start}. {plugin} is {random.choice(superlatives)}"
     ]
     return random.choice(sentences)
 
