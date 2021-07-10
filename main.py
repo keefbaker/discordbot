@@ -15,19 +15,29 @@ STARTS = [
     "I'm blown away by",
     "I'm stunned by",
     "I'm shocked by",
+    "It's jaw dropping! I'm electrified by"
     "I'm amazed by"
 ]
 
 MIDS = [
     "how much animation",
     "the new avenues",
+    "the endless possibilities",
+    "the world of sound",
+    "the shimmering reverb",
+    "the mindblowing waves",
+    "the stunning vistas",
+    "the killer tone",
+    "the sumptiuous deep, rich vibes",
     "the epic farts"
 ]
 
 ENDS = [
     "gives me!",
     "is opening!",
-    "adds."
+    "adds.",
+    "makes possible!",
+    "brings to the table"
 ]
 
 def get_token():
