@@ -92,7 +92,7 @@ async def generate_message(plugin):
         f"{start}! {mid.capitalize()} {plugin} {end}",
         f"{start}! {mid.capitalize()} from {plugin}!",
         f"I'm too busy to deal with your shit right now.... sigh... Ok, {plugin} is decent. Happy?",
-        f"{mid.capitalize()}, {start}. {plugin} is {random.choice(superlatives)}!"
+        f"{mid.capitalize()}, {start}. {plugin} is {random.choice(superlatives)}!",
         f"{plugin.capitalize()} is not as good as hardware, but it is {random.choice(superlatives)}"
     ]
     return random.choice(sentences)
