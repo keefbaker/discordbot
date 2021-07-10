@@ -15,7 +15,10 @@ STARTS = [
     "I'm blown away by",
     "I'm stunned by",
     "I'm shocked by",
-    "It's jaw dropping! I'm electrified by"
+    "It's jaw dropping! I'm electrified by",
+    "Phenomenal! I'm impressed by",
+    "If only I'd had this years ago. It's impressive",
+    "Wow! just,",
     "I'm amazed by"
 ]
 
@@ -33,6 +36,7 @@ MIDS = [
     "the dreamy richness",
     "the digital textures",
     "the nature based generative possibilities",
+    "how genuinely analogue-sounding",
     "how they pulled off the power that",
     "why nobody ever made this before. The sheer sonic power"
 ]
@@ -44,7 +48,7 @@ ENDS = [
     "makes possible!",
     "brings to the table.",
     "implies.",
-    "has empowered me with"
+    "has empowered me with!"
 ]
 
 
@@ -56,7 +60,6 @@ def get_token():
     parser = argparse.ArgumentParser()
     parser.add_argument("token", nargs="?")
     args = parser.parse_args()
-    print(args.token)
     if args.token and args.token != "bullshit":
         return args.token
     if os.environ.get("DISCORD_TOKEN"):
