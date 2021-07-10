@@ -18,7 +18,7 @@ STARTS = [
     "It's jaw dropping! I'm electrified",
     "Phenomenal! I'm impressed",
     "If only I'd had this years ago. It's impressive",
-    "Wow! just",
+    "Wow! Astounded",
     "I'm amazed"
 ]
 
