@@ -11,15 +11,15 @@ import argparse
 import discord
 
 STARTS = [
-    "I’m really impressed by",
-    "I'm blown away by",
-    "I'm stunned by",
-    "I'm shocked by",
-    "It's jaw dropping! I'm electrified by",
-    "Phenomenal! I'm impressed by",
+    "I’m really impressed",
+    "I'm blown away",
+    "I'm stunned",
+    "I'm shocked",
+    "It's jaw dropping! I'm electrified",
+    "Phenomenal! I'm impressed",
     "If only I'd had this years ago. It's impressive",
-    "Wow! just,",
-    "I'm amazed by"
+    "Wow! just",
+    "I'm amazed"
 ]
 
 MIDS = [
@@ -74,7 +74,12 @@ async def generate_message(plugin):
     start = random.choice(STARTS)
     mid = random.choice(MIDS)
     end = random.choice(ENDS)
-    return f"{start} {mid} {plugin} {end}"
+    sentences = [
+        f"{start} by {mid} {plugin} {end}",
+        f"{start}! {mid.capitalize()} {plugin} {end}",
+        f"{start}! {mid.capitalize()} it is to use {plugin}!"
+    ]
+    return random.choice(sentences)
 
 
 class Richard(discord.Client):
