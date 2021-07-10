@@ -29,7 +29,12 @@ MIDS = [
     "the stunning vistas",
     "the killer tone",
     "the sumptiuous deep, rich vibes",
-    "the epic farts"
+    "the epic farts",
+    "the dreamy richness",
+    "the digital textures",
+    "the nature based generative possibilities",
+    "how they pulled off the power that",
+    "why nobody ever made this before. The sheer sonic power"
 ]
 
 ENDS = [
@@ -37,8 +42,11 @@ ENDS = [
     "is opening!",
     "adds.",
     "makes possible!",
-    "brings to the table"
+    "brings to the table.",
+    "implies.",
+    "has empowered me with"
 ]
+
 
 def get_token():
     """
@@ -46,16 +54,15 @@ def get_token():
     This gets from either
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument("token", nargs="?", const="bullshit")
+    parser.add_argument("token", nargs="?")
     args = parser.parse_args()
-    if args.token != "bullshit":
+    print(args.token)
+    if args.token and args.token != "bullshit":
         return args.token
     if os.environ.get("DISCORD_TOKEN"):
         return os.environ["DISCORD_TOKEN"]
-    print("No discord token found. You need to either:")
-    print("  > Run this script with the token as an argument")
-    print("  > set the DISCORD_TOKEN env variable")
-    sys.exit(1)
+    return None
+
 
 async def generate_message(plugin):
     """
@@ -81,7 +88,14 @@ class Richard(discord.Client):
             plugin = ' '.join(message.content.split()[1:])
             await message.reply(await generate_message(plugin))
 
+
 if __name__ == "__main__":
     client = Richard()
     token = get_token()
-    client.run(token)
+    if token:
+        client.run(token)
+    else:
+        print("No discord token found. You need to either:")
+        print("  > Run this script with the token as an argument")
+        print("  > set the DISCORD_TOKEN env variable")
+        sys.exit(1)
